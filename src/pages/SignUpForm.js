@@ -6,6 +6,7 @@ class SignUpForm extends Component {
     super();
 
     this.state = {
+      lname:"",
       email: "",
       password: "",
       name: "",
@@ -41,18 +42,34 @@ class SignUpForm extends Component {
         <form onSubmit={this.handleSubmit} className="formFields">
           <div className="formField">
             <label className="formFieldLabel" htmlFor="name">
-              Full Name
+              First Name
             </label>
             <input
               type="text"
               id="name"
               className="formFieldInput"
-              placeholder="Enter your full name"
+              placeholder="Enter your First name"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
-            />
+            />            
           </div>
+
+          <div className="formField">
+            <label className="formFieldLabel" htmlFor="name">
+              Last Name
+            </label>
+            <input
+              type="text"
+              id="lname"
+              className="formFieldInput"
+              placeholder="Enter your Last name"
+              name="name"
+              value={this.state.lname}
+              onChange={this.handleChange}
+            />
+            </div>
+
           <div className="formField">
             <label className="formFieldLabel" htmlFor="password">
               Password
@@ -67,6 +84,7 @@ class SignUpForm extends Component {
               onChange={this.handleChange}
             />
           </div>
+          
           <div className="formField">
             <label className="formFieldLabel" htmlFor="email">
               E-Mail Address
@@ -111,9 +129,6 @@ class SignUpForm extends Component {
             />
           </div>
 
-          
-          
-
           <div className="formField">
             <label className="formFieldCheckboxLabel">
               <input
@@ -142,3 +157,4 @@ class SignUpForm extends Component {
   }
 }
 export default SignUpForm;
+
